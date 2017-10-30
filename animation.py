@@ -613,15 +613,15 @@ while success:
 		b = t[2]
 
 		if(r>220 and g>220 and b >220):
-			s = "w"
+			s = "255;255;255"
 		elif(140<r and r< 190 and 140<g and g< 190 and 140<b and b< 190 ):
-			s="g"
+			s="0;0;255"
 		elif(r<60 and g >180):
-			s= "y"
+			s= "255;255;200"
 		elif(r<60 and g<180):
-			s = "o"
+			s = "255;140;0"
 		elif(b<60):
-			s = "c"
+			s = "0;255;255"
 		else:
 			s=previous
 			
