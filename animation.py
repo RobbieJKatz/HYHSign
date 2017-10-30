@@ -614,6 +614,8 @@ while success:
 
 		if(r>220 and g>220 and b >220):
 			s = "255;255;255"
+		elif(r<10 and g<10 and b <10):
+			s = "0;0;0"
 		elif(140<r and r< 190 and 140<g and g< 190 and 140<b and b< 190 ):
 			s="0;0;255"
 		elif(r<60 and g >180):
@@ -622,8 +624,10 @@ while success:
 			s = "255;140;0"
 		elif(b<60):
 			s = "0;255;255"
+	
 		else:
 			s=previous
+			#d+=1
 			
 
 		f.write(s+'\n')
