@@ -604,7 +604,7 @@ while True:
 		with open("./textfiles/"+str(count)+'.txt') as f:
 			for i in range(592):
 				s=f.readline();
-				ss = s.split(',');
+				ss = s.split(';');
 				y=l[counter][0]
 				x=l[counter][1]
 

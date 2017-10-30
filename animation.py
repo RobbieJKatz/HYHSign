@@ -594,7 +594,8 @@ l=[[591,838],
 [656,995],
 [657,995],
 [658,995]]
-
+previous = "d"
+d=0
 vidcap = cv2.VideoCapture('movie.mp4')
 success,image = vidcap.read()
 count = 0
@@ -603,12 +604,36 @@ success = True
 print(l[0][1])
 
 while success:
-	f = open("./textfiles/"+str(count)+'.txt','w')
+	previous = "d"
+	f = open("./newTestFiles/"+str(count)+'.txt','w')
 	for i in range(592):
 		t=(image[l[i][0]][l[i][1]])
-		s = str(t[0])+';'+str(t[1])+';'+str(t[2])+'\n'
-		f.write(s)
+		r = t[0]
+		g = t[1]
+		b = t[2]
+
+		if(r>220 and g>220 and b >220):
+			s = "w"
+		elif(140<r and r< 190 and 140<g and g< 190 and 140<b and b< 190 ):
+			s="g"
+		elif(r<60 and g >180):
+			s= "y"
+		elif(r<60 and g<180):
+			s = "o"
+		elif(b<60):
+			s = "c"
+		else:
+			s=previous
+			
+
+		f.write(s+'\n')
+		if(s=="d"):
+			d+=1
+			print count
+		previous =s
 	f.close();
 	success,image = vidcap.read()
 	count += 1
+print d
+
 
