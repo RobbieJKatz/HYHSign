@@ -1,4 +1,5 @@
 import cv2,PIL
+import numpy as np
 
 l=[[591,838],
 [590,838],
@@ -606,7 +607,8 @@ while success:
 	f = open("./textfiles/"+str(count)+'.txt','w')
 	for i in range(592):
 		t=(image[l[i][0]][l[i][1]])
-		s = str(t[0])+','+str(t[1])+','+str(t[2])+'\n'
+		p = (np.uint8(t[0])<<8)+(np.uint8(t[1])<<8)+(np.uint8(t[2])<<8)
+		s = str(p)+'\n'
 		f.write(s)
 	f.close();
 	success,image = vidcap.read()
