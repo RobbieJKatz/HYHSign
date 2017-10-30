@@ -606,7 +606,7 @@ while success:
 	f = open("./textfiles/"+str(count)+'.txt','w')
 	for i in range(592):
 		t=(image[l[i][0]][l[i][1]])
-		s = str(t[0])+','+str(t[1])+','+str(t[2])+'\n'
+		s = str(t[0])+';'+str(t[1])+';'+str(t[2])+'\n'
 		f.write(s)
 	f.close();
 	success,image = vidcap.read()
