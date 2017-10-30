@@ -1,7 +1,7 @@
 count = 0;
 while True:
 	counter = 0;
-	if(count < 1):
+	if(count < 400):
 		with open("./textfiles/"+str(count)+'.txt') as f:
 			for i in range(592):
 				s=f.readline();
