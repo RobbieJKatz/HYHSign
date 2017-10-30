@@ -17,9 +17,3 @@ while True:
 		break
 
 
-
-
-
-
-		d
-
