@@ -1,8 +1,6 @@
 import cv2,PIL
 
-l=[[591,838],
-[590,838],
-[588,838],
+l=[[588,838],
 [587,838],
 [586,838],
 [584,838],
@@ -606,7 +604,7 @@ print(l[0][1])
 while success:
 	previous = "d"
 	f = open("./newTestFiles/"+str(count)+'.txt','w')
-	for i in range(592):
+	for i in range(590):
 		t=(image[l[i][0]][l[i][1]])
 		r = t[0]
 		g = t[1]

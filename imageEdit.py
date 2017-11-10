@@ -3,7 +3,7 @@ import cv2, math
 f = cv2.imread("./frames/frame98.jpg")
 p = [120,120,255]
 
-l = range(128)
+l = range(126)
 l = l[::-1]
 for i in l:
 	f[425+(int)(i*1.31),838] =p 
