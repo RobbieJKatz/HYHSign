@@ -603,7 +603,7 @@ print(l[0][1])
 
 while success:
 	previous = "d"
-	f = open("./newTestFiles/"+str(count)+'.txt','w')
+	f = open("./again/"+str(count)+'.txt','w')
 	for i in range(590):
 		t=(image[l[i][0]][l[i][1]])
 		r = t[0]
@@ -611,17 +611,17 @@ while success:
 		b = t[2]
 
 		if(r>220 and g>220 and b >220):
-			s = "255;255;255"
+			s = "0"#255;255;255"
 		elif(r<10 and g<10 and b <10):
-			s = "0;0;0"
+			s = "1"#"0;0;0"
 		elif(140<r and r< 190 and 140<g and g< 190 and 140<b and b< 190 ):
-			s="0;0;255"
+			s= "2"#"0;0;255"
 		elif(r<60 and g >180):
-			s= "255;255;200"
+			s= "3"#"255;255;200"
 		elif(r<60 and g<180):
-			s = "255;140;0"
+			s = "4"#"255;140;0"
 		elif(b<60):
-			s = "0;255;255"
+			s = "5"#"0;255;255"
 	
 		else:
 			s=previous
